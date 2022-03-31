@@ -1,7 +1,7 @@
 from .common import ytm 
 
 
-def get_search_results(query: str, lim: int = 50) -> list:
+def get_search_results(query: str, lim: int = 20) -> list:
     return [
         {
             'id': result['videoId'],
