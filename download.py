@@ -14,4 +14,4 @@ def download_audio(video_id, download_path):
     return f"{video_id}.mp3"
 
 if __name__ == "__main__":
-    download("oakNKCwMoSo", DOWNLOAD_PATH)
+    download_audio("oakNKCwMoSo", DOWNLOAD_PATH)
