@@ -2,7 +2,9 @@ from pytube import YouTube
 import os
 
 import json
+
 DOWNLOAD_PATH = json.load(open("runconfig.json"))["DOWNLOADS_PATH"]
+
 
 def download_audio(video_id, download_path):
     outname = f"{download_path}/{video_id}.mp3"
@@ -12,6 +14,7 @@ def download_audio(video_id, download_path):
     out = yt.streams.filter(only_audio=True).first().download(download_path)
     os.rename(out, outname)
     return f"{video_id}.mp3"
+
 
 if __name__ == "__main__":
     download_audio("oakNKCwMoSo", DOWNLOAD_PATH)
